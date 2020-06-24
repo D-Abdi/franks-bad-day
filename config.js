@@ -45,7 +45,7 @@ const config = {
   let creators
   let ending  
 
-  let enemySpeed = 60
+  let enemySpeed = 67.5
 
    // Plug in code die ik niet helemaal begrijp
  var GetValue = Phaser.Utils.Objects.GetValue;

@@ -151,7 +151,6 @@ class Dil2 extends Phaser.Scene {
      
         if(cursors.space.isDown && keuze2.active == true ) {
           bearDil.setTexture('bearHappy', 0)
-          bearDil.setPosition(-150,-200)
           
           console.log('optie 2 selected')
      

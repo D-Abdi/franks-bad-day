@@ -59,7 +59,7 @@ class Dil4 extends Phaser.Scene {
         });
         
         // Code om te organiseren wat voor tekst er moet worden laten zien op welk moment
-        text.appendContent('On your way to the bathroom, you bump into the leader of the dog gang W.O.O.F stands in front of you', 30);
+        text.appendContent('On your way to the bathroom, you bump into the leader of the dog gang W.O.O.F.', 30);
         text.appendContent(`"A cat bumping in to me?! This is not your lucky day pal!"`, 30);
         text.appendContent(`This doesn't look good. He seems ready too fight.`, 30);
         text.appendContent(`(What are you going to do?)`, 30);
