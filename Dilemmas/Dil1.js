@@ -166,7 +166,7 @@ class Dil1 extends Phaser.Scene {
                    this.scene.cameras.main.fade(1500, 0, 0, 0, false, function(camera, progress){
                    if(progress > 0.9){    
                    this.scene.stop("Dil1"); 
-                   this.scene.start('MG2')
+                   this.scene.start('Scene3')
                }})})}
            
               if(keuze2.active == true) {
@@ -209,7 +209,7 @@ class Dil1 extends Phaser.Scene {
                    this.scene.cameras.main.fade(1500, 0, 0, 0, false, function(camera, progress){
                        if(progress > 0.9){     
                        this.scene.stop("Dil1"); 
-                       this.scene.start('MG2')
+                       this.scene.start('Scene3')
                    }})})}  
       }
 }    

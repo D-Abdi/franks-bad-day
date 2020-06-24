@@ -34,7 +34,7 @@ class Dil2 extends Phaser.Scene {
         keuze2.setInteractive()
      
         // Tekst in de optieblokken
-        keuze1Text = this.add.text(205, 570, 'Tell your boss\nto go f*ck off', {fontSize: '25px', color: '0x000000', fontFamily: 'VT323'}).setDepth(0.1)
+        keuze1Text = this.add.text(205, 570, 'Tell your boss\nto f*ck off', {fontSize: '25px', color: '0x000000', fontFamily: 'VT323'}).setDepth(0.1)
         
         keuze2Text = this.add.text(575, 550, `Tell your boss you'll\ndo the job, and hand the\njob over to one of your\ncolleagues`, {fontSize: '21px', color: '0x000000', fontFamily: 'VT323'}).setDepth(0.1)
      

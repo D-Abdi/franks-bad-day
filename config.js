@@ -9,7 +9,7 @@ const config = {
         debug: false,
       }
     },
-    scene: [Preload, Title, Disc, Intro, MG1, Dil1, MG2, Dil2, MG3, Dil3, Dil4, MG4, Dil5, Limbo, Coward, Credits],
+    scene: [Preload, Title, Disc, Intro, MG1, Dil1, Scene3, MG2, Dil2, MG3, Dil3, Dil4, MG4, Dil5, Limbo, Coward, Credits],
     scale: {
       mode: Phaser.Scale.FIT,
       autoCenter: Phaser.Scale.CENTER_BOTH
