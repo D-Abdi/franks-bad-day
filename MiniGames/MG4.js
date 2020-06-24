@@ -26,8 +26,6 @@ class MG4 extends Phaser.Scene {
         gameState.enemy3 = this.physics.add.sprite(300, 600, 'Dog')
         gameState.enemy4 = this.physics.add.sprite(800, 250, 'Dog')
 
-        this.codey = this.physics.add.sprite(500, 300, 'Dog')
-
         // Levens
         lives = this.add.sprite(900, 50, '9lives')
        
@@ -50,7 +48,14 @@ class MG4 extends Phaser.Scene {
         this.anims.create({
           key: 'dogRun',
           frames: this.anims.generateFrameNumbers('Dog', { start: 1, end: 5 }),
-          frameRate: 6,
+          frameRate: 5,
+          repeat: -1
+        }); 
+
+        this.anims.create({
+          key: 'dogIdle',
+          frames: this.anims.generateFrameNumbers('Dog', { start: 0, end: 1 }),
+          frameRate: 2.5,
           repeat: -1
         }); 
           
@@ -189,43 +194,8 @@ class MG4 extends Phaser.Scene {
          }else if (gameState.cursors.down.isDown) {
           gameState.player.body.setVelocityY(speed);
          }
-         
-         // Normalize and scale the velocity so that player can't move faster along a diagonal
-         gameState.player.body.velocity.normalize().scale(speed);
 
-         // Debug voor het moonwalk probleem
-         if(gameState.player.body.x < gameState.enemy.body.x) {
-          gameState.enemy.flipX = true
-          gameState.enemy.anims.play('dogRun', true);
-         } else {
-          gameState.enemy.flipX= false
-          gameState.enemy.anims.play('dogRun', true);
-         }
-
-         if(gameState.player.body.x < gameState.enemy2.body.x) {
-          gameState.enemy2.flipX = true
-          gameState.enemy2.anims.play('dogRun', true);
-         } else {
-          gameState.enemy2.flipX= false
-          gameState.enemy2.anims.play('dogRun', true);
-         }
-
-         if(gameState.player.body.x < gameState.enemy3.body.x) {
-          gameState.enemy3.flipX = true
-          gameState.enemy3.anims.play('dogRun', true);
-         } else {
-          gameState.enemy3.flipX= false
-          gameState.enemy3.anims.play('dogRun', true);
-         }
-
-         if(gameState.player.body.x < gameState.enemy4.body.x) {
-          gameState.enemy4.flipX = true
-          gameState.enemy4.anims.play('dogRun', true);
-         } else {
-          gameState.enemy4.flipX= false
-          gameState.enemy4.anims.play('dogRun', true);
-         }
-        
+         // Animaties voor movement
          if (gameState.cursors.left.isDown) {
           gameState.player.anims.play('run', true);
          }else if (gameState.cursors.right.isDown) {
@@ -237,8 +207,68 @@ class MG4 extends Phaser.Scene {
          } else {
           gameState.player.anims.play('idle', true);
          }
+         
+         // Normalize and scale the velocity so that player can't move faster along a diagonal
+         gameState.player.body.velocity.normalize().scale(speed);
+
+         // Debug voor het moonwalk probleem
+         if(gameState.player.body.x < gameState.enemy.body.x) {
+          gameState.enemy.flipX = true
+
+         } else {
+          gameState.enemy.flipX= false
+         }
+
+         if(gameState.player.body.x < gameState.enemy2.body.x) {
+          gameState.enemy2.flipX = true
+
+         } else {
+          gameState.enemy2.flipX= false
+         }
+
+         if(gameState.player.body.x < gameState.enemy3.body.x) {
+          gameState.enemy3.flipX = true
+
+         } else {
+          gameState.enemy3.flipX= false
+         }
+
+         if(gameState.player.body.x < gameState.enemy4.body.x) {
+          gameState.enemy4.flipX = true
+
+         } else {
+          gameState.enemy4.flipX= false
+         }
+
          // Einde Debug sectie
          //
+         
+         // Alternate tussen walk en idle 
+         if(gameState.enemy.body.velocity.x > 0 || gameState.enemy.body.velocity.x < 0) {
+          gameState.enemy.anims.play('dogRun', true);
+         } else {
+          gameState.enemy.anims.play('dogIdle', true);
+         }
+
+         if(gameState.enemy2.body.velocity.x > 0 || gameState.enemy2.body.velocity.x < 0) {
+          gameState.enemy2.anims.play('dogRun', true);
+         } else {
+          gameState.enemy2.anims.play('dogIdle', true);
+         }
+
+         if(gameState.enemy3.body.velocity.x > 0 || gameState.enemy3.body.velocity.x < 0) {
+          gameState.enemy3.anims.play('dogRun', true);
+         } else {
+          gameState.enemy3.anims.play('dogIdle', true);
+         }
+
+         if(gameState.enemy4.body.velocity.x > 0 || gameState.enemy4.body.velocity.x < 0) {
+          gameState.enemy4.anims.play('dogRun', true);
+         } else {
+          gameState.enemy4.anims.play('dogIdle', true);
+         }                 
+         //
+
          function followPlayer() {
           if(gameState.player.body.x < gameState.enemy.body.x) {
             gameState.enemy.body.flipX = true
