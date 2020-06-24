@@ -88,6 +88,9 @@ class Preload extends Phaser.Scene {
             this.load.video('introScene', 'assets/videos/introScene.mp4')
             this.load.video('scene1', 'assets/videos/Scene1.mp4')
             this.load.video('scene3', 'assets/videos/Scene3.mp4')
+            this.load.video('scene4', 'assets/videos/Scene4.mp4')
+            this.load.video('scene5_1', 'assets/videos/Scene5_1.mp4')
+            this.load.video('scene5_2', 'assets/videos/Scene5_2.mp4')
             //
             this.load.image('bg', 'assets/background.jpg')
             this.load.image('rain', 'assets/rain.png')

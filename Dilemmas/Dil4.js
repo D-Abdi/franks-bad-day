@@ -59,7 +59,7 @@ class Dil4 extends Phaser.Scene {
         });
         
         // Code om te organiseren wat voor tekst er moet worden laten zien op welk moment
-        text.appendContent('The leader of the dog gang W.O.O.F stands in front of you', 30);
+        text.appendContent('On your way to the bathroom, you bump into the leader of the dog gang W.O.O.F stands in front of you', 30);
         text.appendContent(`"A cat bumping in to me?! This is not your lucky day pal!"`, 30);
         text.appendContent(`This doesn't look good. He seems ready too fight.`, 30);
         text.appendContent(`(What are you going to do?)`, 30);
@@ -133,7 +133,7 @@ class Dil4 extends Phaser.Scene {
      
           text.startNext()
           // Tekst na selectie keuze
-          text.appendContent(`You were in the middle of explaining why you guys were better of not fighting until suddenly...\n                   -10 Points`, 30)
+          text.appendContent(`You try to talk him out of punching you. But it made him even more mad.\n\n\n                   -10 Points`, 30)
 
           // Morality omlaag halen
           gameState.morality -= 10
@@ -148,7 +148,7 @@ class Dil4 extends Phaser.Scene {
              this.scene.cameras.main.fade(1500, 0, 0, 0, false, function(camera, progress){
              if(progress > 0.9){    
              this.scene.stop("Dil4"); 
-             this.scene.start('MG4')
+             this.scene.start('Scene5_2')
          }})})}
      
         if(cursors.space.isDown && keuze2.active == true ) {
@@ -170,7 +170,7 @@ class Dil4 extends Phaser.Scene {
           
           text.startNext()
      
-          text.appendContent(`You took your best shot but he's still standing. So you decide it's time to run!\n\n                   -20 Points`, 30)
+          text.appendContent(`You took your best shot but he's still standing. Change of plans.\n\n                   -20 Points`, 30)
 
           // Morality omlaag halen
           gameState.morality -= 20
@@ -185,7 +185,7 @@ class Dil4 extends Phaser.Scene {
              this.scene.cameras.main.fade(1500, 0, 0, 0, false, function(camera, progress){
                  if(progress > 0.9){     
                  this.scene.stop("Dil4"); 
-                 this.scene.start('MG4')
+                 this.scene.start('Scene5_2')
              }})})}         
       }    
 }    

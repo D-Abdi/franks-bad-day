@@ -150,7 +150,7 @@ class Dil3 extends Phaser.Scene {
              this.scene.cameras.main.fade(1500, 0, 0, 0, false, function(camera, progress){
              if(progress > 0.9){    
              this.scene.stop("Dil3"); 
-             this.scene.start('Dil4')
+             this.scene.start('Scene5_1')
          }})})}
      
         if(cursors.space.isDown && keuze2.active == true ) {

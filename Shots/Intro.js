@@ -19,7 +19,7 @@ class Intro extends Phaser.Scene {
 
         video2.on('complete', function(video2) {
             this.scene.stop('Intro')
-            this.scene.start('Disc')
+            this.scene.start('MG1')
         }, this)
     }
 }
