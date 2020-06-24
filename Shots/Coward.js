@@ -5,7 +5,7 @@ class Coward extends Phaser.Scene {
 
     create(){
 
-        let ending4_1 = this.add.text(375, 200, "Ending 4:", {fontSize: 80, fill: '#FFF', fontFamily: 'VT323'})
+        let ending4_1 = this.add.text(375, 200, "Ending 3:", {fontSize: 80, fill: '#FFF', fontFamily: 'VT323'})
         let ending4_2 = this.add.text(275, 270, "Coward", {fontSize: 200, fill: '#FFF', fontFamily: 'VT323'})
 
         ending4_1.alpha = 0

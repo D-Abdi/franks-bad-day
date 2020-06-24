@@ -1,11 +1,11 @@
-class Limbo extends Phaser.Scene {
+class Good extends Phaser.Scene {
     constructor() {
-      super({ key: 'Limbo'})
+      super({ key: 'Good'})
     }
     create(){
 
-        let ending4_1 = this.add.text(335, 200, "Ending 2:", {fontSize: 80, fill: '#FFF', fontFamily: 'VT323'})
-        let ending4_2 = this.add.text(275, 270, "Limbo", {fontSize: 200, fill: '#FFF', fontFamily: 'VT323'})
+        let ending4_1 = this.add.text(335, 200, "Ending 1:", {fontSize: 80, fill: '#FFF', fontFamily: 'VT323'})
+        let ending4_2 = this.add.text(310, 270, "Good", {fontSize: 200, fill: '#FFF', fontFamily: 'VT323'})
 
         ending4_1.alpha = 0
         ending4_2.alpha = 0
@@ -27,7 +27,7 @@ class Limbo extends Phaser.Scene {
             ease: 'linear',
             yoyo: true,
             onComplete: () => {
-                this.scene.stop('Limbo')
+                this.scene.stop('Good')
                 this.scene.start('Credits')
             }
         })
