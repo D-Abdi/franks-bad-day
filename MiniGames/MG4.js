@@ -160,10 +160,10 @@ class MG4 extends Phaser.Scene {
               cdText.setText("You Won!")
               this.cameras.main.fade(1100, 0, 0, 0, false, function(camera, progress) {
                 if(progress > 0.9) {
+                  if(gameState.morality < 60 && gameState.morality >= 20){
                   this.scene.stop('MG4')
                   this.scene.start('Dil5')
-                  
-                }
+                  }}
               })               
           } 
       }         

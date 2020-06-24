@@ -27,7 +27,7 @@ class Disc extends Phaser.Scene {
             yoyo: true,
             onComplete: () => {
                 this.scene.stop('Disc')
-                this.scene.start('MG1')
+                this.scene.start('Intro')
             }
         }) 
     }
