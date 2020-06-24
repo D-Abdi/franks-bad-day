@@ -6,7 +6,7 @@ const config = {
     physics: {
       default: 'arcade',
       arcade: {
-        debug: true,
+        debug: false,
       }
     },
     scene: [Preload, Title, Disc, MG1, Dil1, MG2, Dil2, MG3, Dil3, Dil4, MG4, Dil5, Limbo, Coward, Credits],
