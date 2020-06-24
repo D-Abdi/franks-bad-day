@@ -89,7 +89,7 @@ class Preload extends Phaser.Scene {
             this.load.image('rain', 'assets/rain.png')
             this.load.spritesheet('codey', 'assets/codey.png', { frameWidth: 72, frameHeight: 90 });
             this.load.spritesheet('snowman', 'assets/snowman.png', { frameWidth: 50, frameHeight: 70 });
-            this.load.spritesheet('9lives', 'assets/9lives.png', {frameWidth: 100, frameHeight: 100})
+            this.load.spritesheet('9lives', '../assets/9lives.png', {frameWidth: 100, frameHeight: 100})
             this.load.tilemapTiledJSON('map', 'assets/indoorTest2.json');
             this.load.image('tiles', 'assets/RPGmap.png')
             this.load.image('wallet', 'assets/wallet.png')
