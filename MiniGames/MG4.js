@@ -170,7 +170,7 @@ class MG4 extends Phaser.Scene {
                     //
                   //}else if(gameState.morality < 60 && gameState.morality >= 20){
                   this.scene.stop('MG4')
-                  this.scene.start('Dil5')
+                  this.scene.start('Scene6')
                   }//}
               })               
           } 

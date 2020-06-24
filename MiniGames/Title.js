@@ -55,7 +55,7 @@ class Title extends Phaser.Scene {
         this.cameras.main.fade(1000, 0, 0, 0, false, function(camera, progress) {
           if(progress > 0.99){ 
             this.scene.stop('Title');
-            this.scene.start('Dil5_Bad')
+            this.scene.start('Disc')
           }
         }) 
       }

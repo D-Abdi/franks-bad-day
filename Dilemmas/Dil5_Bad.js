@@ -36,7 +36,7 @@ class Dil5_Bad extends Phaser.Scene {
         text.appendContent(`"The answer is none."`, 30);
         text.appendContent(`"You had yours, but you blew it on being an asshole."`, 30);
         text.appendContent(`"Now you will have to regret your desicions for all eternity."`, 30);
-        text.appendContent(`"Now Die!"`, 30);
+        text.appendContent(`"Now Die."`, 30);
         textblok.setInteractive()
      
         this.input.keyboard.on('keydown', function () {
@@ -44,6 +44,8 @@ class Dil5_Bad extends Phaser.Scene {
         })
      
         text.once('complete', function () {
+          // Haal de opties en de bijbehorende tekst tevoorschijn
+          this.scene.input.keyboard.on('keydown' ,function(){
              // Laat de speler niet nog een keer een input doen  
              this.scene.input.keyboard.enabled = false 
              console.log(this.scene.input.keyboard.enabled)
@@ -53,7 +55,7 @@ class Dil5_Bad extends Phaser.Scene {
                  this.scene.stop("Dil5_Bad"); 
                  this.scene.start('Bad')
                  }
-                })
+                })})
             })
       }
 }    
